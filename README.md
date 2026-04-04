@@ -1,4 +1,25 @@
-## Gemini Disable AutoScroll
+# Gemini Disable AutoScroll
+
+## How to use it
+
+1. Clone this repository
+
+2. Go to the extensions page (for brave it's the url 'brave://extensions/')
+
+3. Enable Developer mode in top right corner
+![dev mode](readme-images/devmode.png)
+
+4. Click on Load unpacked in top left corner
+![load unpacked](readme-images/loadunpacked.png)
+
+5. Select the folder where you cloned the repository
+
+
+### Congrats! That's all.
+### You can now go to Gemini and use it
+
+
+## Overview 
 
 Just a simple extension for toggling auto-scroll for Gemini response generation.
 
