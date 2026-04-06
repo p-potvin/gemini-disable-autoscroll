@@ -31,3 +31,13 @@
 
 ### Scroll-to-bottom button
 ![scroll-to-bottom button](readme-images/image3.png)
+
+
+## Credits
+
+### Icons
+- [Scroll icon](https://www.flaticon.com/free-icon/mouse_15712478) created by [Indygo](https://www.flaticon.com/authors/indygo) - [Flaticon](https://www.flaticon.com)
+- [Prohibition icon](https://www.flaticon.com/free-icon/prohibition_929457) created by [Freepik](https://www.flaticon.com/authors/freepik) - [Flaticon](https://www.flaticon.com)
+
+### Tools
+- [PineTools](https://pinetools.com/round-corners-image) - Used to round icon corners
