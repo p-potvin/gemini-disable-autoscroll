@@ -6,7 +6,7 @@
 
 1. Clone this repository
 
-2. Go to the extensions page (for brave it's the url 'brave://extensions/')
+2. Go to the extensions page (`chrome://extensions/`, `brave://extensions/`, `edge://extensions/`, etc.)
 
 3. Enable Developer mode in top right corner
 ![dev mode](readme-images/devmode.png)
