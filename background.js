@@ -1,9 +1,9 @@
 // service worker that manages badge of current state
 
 function updateBadge(enabled) {
-  chrome.action.setBadgeText({ text: enabled ? 'ON' : 'OFF' });
+  chrome.action.setBadgeText({ text: enabled ? "ON" : "OFF" });
   chrome.action.setBadgeBackgroundColor({
-    color: enabled ? '#4a6cf7' : '#555',
+    color: enabled ? "#4a6cf7" : "#555",
   });
 }
 
@@ -15,7 +15,7 @@ chrome.runtime.onInstalled.addListener(() => {
 });
 
 chrome.storage.onChanged.addListener((changes, area) => {
-  if (area === 'local' && changes.enabled) {
+  if (area === "local" && changes.enabled) {
     updateBadge(changes.enabled.newValue);
   }
 });

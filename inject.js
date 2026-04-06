@@ -1,7 +1,7 @@
 // injected into the page's main world to override scroll methods
 
 (function () {
-  const scriptTag = document.getElementById('gsc-inject');
+  const scriptTag = document.getElementById("gsc-inject");
   if (!scriptTag) return;
 
   let enabled;
@@ -39,50 +39,62 @@
   }
 
   // scroll to bottom button
-  const BTN_ID = 'gsc-scroll-btn';
+  const BTN_ID = "gsc-scroll-btn";
 
-	if (!enabled) {
-		const existing = document.getElementById(BTN_ID);
-		if (existing) existing.remove();
-		return;
-	}
+  if (!enabled) {
+    const existing = document.getElementById(BTN_ID);
+    if (existing) existing.remove();
+    return;
+  }
 
-	const btn = document.createElement('button');
-	btn.id = BTN_ID;
-	btn.textContent = '🡻'; // taken from https://emojidb.org/down-arrow-emojis
-	btn.title = 'Scroll to bottom';
+  const btn = document.createElement("button");
+  btn.id = BTN_ID;
+  btn.textContent = "🡻"; // taken from https://emojidb.org/down-arrow-emojis
+  btn.title = "Scroll to bottom";
 
-	Object.assign(btn.style, {
-		position: 'fixed',
-		bottom: '90px',
-		right: '24px',
-		zIndex: '99999',
-		width: '40px',
-		height: '40px',
-		borderRadius: '50%',
-		border: 'none',
-		background: '#001b87',
-		color: '#fff',
-		fontSize: '20px',
-		cursor: 'pointer',
-		boxShadow: '0 2px 8px rgba(0,0,0,0.3)',
-		display: 'flex',
-		alignItems: 'center',
-		justifyContent: 'center',
-		transition: 'opacity 0.2s',
-		opacity: '0.8'
-	});
+  Object.assign(btn.style, {
+    position: "fixed",
+    bottom: "90px",
+    right: "24px",
+    zIndex: "99999",
+    width: "40px",
+    height: "40px",
+    borderRadius: "50%",
+    border: "none",
+    background: "#001b87",
+    color: "#fff",
+    fontSize: "20px",
+    cursor: "pointer",
+    boxShadow: "0 2px 8px rgba(0,0,0,0.3)",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    transition: "opacity 0.2s",
+    opacity: "0.8",
+  });
 
-	btn.addEventListener('mouseenter', () => { btn.style.opacity = '0.5'; });
-	btn.addEventListener('mouseleave', () => { btn.style.opacity = '0.8'; });
-	btn.addEventListener('click', () => {
-		const scroller = document.querySelector('[data-test-id="chat-history-container"]');
-		if (scroller) {
-			orig.scroll_el.call(scroller, { top: scroller.scrollHeight, behavior: 'smooth' });
-		} else {
-			orig.scrollTo_win.call(window, { top: document.documentElement.scrollHeight, behavior: 'smooth' });
-		}
-	});
+  btn.addEventListener("mouseenter", () => {
+    btn.style.opacity = "0.5";
+  });
+  btn.addEventListener("mouseleave", () => {
+    btn.style.opacity = "0.8";
+  });
+  btn.addEventListener("click", () => {
+    const scroller = document.querySelector(
+      '[data-test-id="chat-history-container"]',
+    );
+    if (scroller) {
+      orig.scroll_el.call(scroller, {
+        top: scroller.scrollHeight,
+        behavior: "smooth",
+      });
+    } else {
+      orig.scrollTo_win.call(window, {
+        top: document.documentElement.scrollHeight,
+        behavior: "smooth",
+      });
+    }
+  });
 
-	document.body.appendChild(btn)
+  document.body.appendChild(btn);
 })();

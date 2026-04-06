@@ -6,7 +6,7 @@
 
 body {
   width: 260px;
-  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-family: "Segoe UI", system-ui, sans-serif;
   background: #1a1a2e;
   color: #e0e0e0;
 }
@@ -57,7 +57,7 @@ body {
 }
 
 .slider::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 2px;
   left: 2px;
@@ -65,7 +65,9 @@ body {
   height: 16px;
   background: #888;
   border-radius: 50%;
-  transition: transform 0.2s, background 0.2s;
+  transition:
+    transform 0.2s,
+    background 0.2s;
 }
 
 input:checked + .slider {
