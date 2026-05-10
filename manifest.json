@@ -1,11 +1,21 @@
 {
   "manifest_version": 3,
-  "name": "Gemini Disable AutoScroll",
-  "version": "1.1.0",
+  "name": "Google Gemini - Disable AutoScroll",
+  "short_name": "Gemini Disable AutoScroll",
+  "version": "1.1.1",
   "description": "Disable auto-scroll on Google Gemini",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "gemini-disable-autoscroll@p-potvin",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  },
   "permissions": ["storage"],
   "host_permissions": ["https://gemini.google.com/*"],
   "action": {
+    "default_title": "Gemini Disable AutoScroll",
     "default_popup": "popup/popup.html",
     "default_icon": {
       "16": "icons/icon16.png",
@@ -19,7 +29,8 @@
     "128": "icons/icon128.png"
   },
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "background.js",
+    "scripts": ["background.js"]
   },
   "content_scripts": [
     {
